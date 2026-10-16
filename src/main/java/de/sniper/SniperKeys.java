@@ -42,7 +42,7 @@ public final class SniperKeys {
     /** Liefert true genau einmal, nachdem die Taste gedrueckt wurde. */
     private static boolean pressed(KeyMapping km) {
         if (km == null || km.isUnbound()) return false;
-        InputConstants.Key k = km.getKey();
+        InputConstants.Key k = InputConstants.getKey(km.saveString());
         if (k.getType() != InputConstants.Type.KEYSYM) return false;
         long window = GLFW.glfwGetCurrentContext();
         boolean now = window != 0 && GLFW.glfwGetKey(window, k.getValue()) == GLFW.GLFW_PRESS;
