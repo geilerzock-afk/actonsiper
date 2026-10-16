@@ -218,7 +218,7 @@ public final class Sniper {
 
         String key = BuiltInRegistries.ITEM.getKey(st.getItem()).toString();
         boolean renamed = st.has(DataComponents.CUSTOM_NAME)
-                && !st.getHoverName().getString().equals(st.getItem().getDescription().getString());
+                && !st.getHoverName().getString().equals(st.getItem().getDefaultInstance().getHoverName().getString());
         // Verzauberte/umbenannte Items und Traenke sind nicht vergleichbar -> kein Deal
         boolean special = renamed || st.isEnchanted()
                 || st.has(DataComponents.STORED_ENCHANTMENTS) || st.has(DataComponents.POTION_CONTENTS);
