@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "ahsniper",
+  "version": "${version}",
+  "name": "AH-Sniper",
+  "description": "Findet guenstige Angebote im Auktionshaus (/ah) und markiert sie.",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.sniper.SniperMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
